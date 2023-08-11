@@ -2,7 +2,7 @@
 
 import 'package:bloc_2/bloc/bloc_bloc.dart';
 import 'package:bloc_2/cubit/internet_cubit.dart';
-import 'package:bloc_2/homepage.dart';
+import 'package:bloc_2/features/Home/UI/home.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -13,12 +13,9 @@ void main() {
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return BlocProvider(
-      create: (context) => InternetCubit(),
-      child: MaterialApp(
-        debugShowCheckedModeBanner: false,
-        home: MyHomePage(),
-      ),
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      home: home_page(),
     );
   }
 }
